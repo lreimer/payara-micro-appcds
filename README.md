@@ -2,11 +2,11 @@
 
 A demo repository to showcase the usage of Java 11 AppCDS with Payara Micro 5.201 to improve startup time.
 
-## Build and run with JDK8+
+## Build and run with JDK11
 
 ```bash
 $ ./gradlew clean ass
-$ mvn payara-micro:start
+$ ./gradlew microStart
 ```
 
 ## Build and run with Docker
