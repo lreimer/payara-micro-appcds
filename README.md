@@ -5,7 +5,7 @@ A demo repository to showcase the usage of Java 11 AppCDS with Payara Micro 5.20
 ## Build and run with JDK11
 
 ```bash
-$ ./gradlew clean ass
+$ ./gradlew kick ass
 $ ./gradlew microStart
 ```
 
