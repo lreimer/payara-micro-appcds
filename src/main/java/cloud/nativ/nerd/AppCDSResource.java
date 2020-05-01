@@ -29,7 +29,7 @@ public class AppCDSResource {
     private boolean appcdsEnabled;
 
     @GET
-    @Timed(name = "getWeather")
+    @Timed(name = "getAppCDS")
     public Response getAppCDS() {
         try {
             TimeUnit.MILLISECONDS.sleep(ThreadLocalRandom.current().nextLong(sleepBound));
