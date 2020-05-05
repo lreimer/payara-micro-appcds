@@ -1,0 +1,5 @@
+set configs.config.server-config.http-service.access-logging-enabled=true
+set configs.config.server-config.http-service.virtual-server.server.access-logging-enabled=true
+set configs.config.server-config.http-service.access-log.log-to-console-enabled=true
+set configs.config.server-config.http-service.access-log.write-interval-seconds=1
+# set configs.config.server-config.http-service.access-log.format="%client.name% %auth-user-name% %datetime% %request% %status% %response.length% %header.referer% %header.user-agent% %time-taken% %header.X-ISPI-REQ-ID% %cookie.JSESSIONID% %header.X-Forwarded-For% %header.X-Forwarded-Host% %header.X-Forwarded-Server% %header.X-ICS-Version% %header.X-APP-Version% %header.X-APP-Name% %attribute.v4%"

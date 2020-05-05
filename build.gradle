@@ -32,5 +32,6 @@ payaraMicro {
     payaraVersion = '5.201'
     deployWar = true
     daemon = false
+    commandLineOptions = [prebootcommandfile: "prebootcommands.txt"]
     javaCommandLineOptions = ["Dappcds.enabled": "false"]
 }
