@@ -7,6 +7,15 @@ A demo repository to showcase the usage of Java 11 AppCDS with Payara Micro 5.20
 ```bash
 $ ./gradlew kick ass
 $ ./gradlew microStart
+
+$ cd build/libs/
+
+$ java -jar payara-micro-appcds-microbundle.jar --rootdir micro-root --outputlauncher
+$ java -XX:DumpLoadedClassList=classes.lst -jar micro-root/launch-micro.jar --deploy payara-micro-appcds.war:/ --warmup
+$ java -Xshare:dump -XX:SharedClassListFile=classes.lst -XX:SharedArchiveFile=payara.jsa -jar micro-root/launch-micro.jar
+
+$ java -Xshare:off -jar micro-root/launch-micro.jar --nocluster
+$ java -Xshare:on -XX:SharedArchiveFile=payara.jsa -jar micro-root/launch-micro.jar --nocluster
 ```
 
 ## Build and run with Docker
