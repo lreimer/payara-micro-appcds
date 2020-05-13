@@ -9,10 +9,14 @@ $ ./gradlew kick ass
 $ ./gradlew microStart
 
 $ cd build/libs/
-
 $ java -jar payara-micro-appcds-microbundle.jar --rootdir micro-root --outputlauncher
+
+# with Java 11
 $ java -XX:DumpLoadedClassList=classes.lst -jar micro-root/launch-micro.jar --deploy payara-micro-appcds.war:/ --warmup
 $ java -Xshare:dump -XX:SharedClassListFile=classes.lst -XX:SharedArchiveFile=payara.jsa -jar micro-root/launch-micro.jar
+
+# with Java 13
+$ java -XX:ArchiveClassesAtExit=payara.jsa -jar micro-root/launch-micro.jar --deploy payara-micro-appcds.war:/ --warmup
 
 $ java -Xshare:off -jar micro-root/launch-micro.jar --nocluster
 $ java -Xshare:on -XX:SharedArchiveFile=payara.jsa -jar micro-root/launch-micro.jar --nocluster
