@@ -25,7 +25,7 @@ public class AppCDSResource {
     private int sleepBound;
 
     @Inject
-    @ConfigProperty(name = "appcds.enabled")
+    @ConfigProperty(name = "appcds.enabled", defaultValue = "false")
     private boolean appcdsEnabled;
 
     @GET
